@@ -90,9 +90,9 @@ class Client(object):
         try:
             response = urlopen(url).read().decode()
             return json.loads(response)
-        except HTTPError, e:
+        except HTTPError as e:
             raise TransparencyDataError(e.read())
-        except (ValueError, KeyError), e:
+        except (ValueError, KeyError) as e:
             raise TransparencyDataError('Invalid Response')
 
 # base types
