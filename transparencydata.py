@@ -84,7 +84,7 @@ class Client(object):
 
         url = "%s?%s" % (urljoin(self.apiurl, self.endpoint), urlencode(params))
         if self.debug:
-            print url
+            print(url)
             return
         
         try:
